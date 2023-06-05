@@ -56,7 +56,7 @@ body {
     display: none;
 }
 
-.button_start {
+.startBtn {
     background: #7AC100;
     border-radius: 12px;
     border: 0;
@@ -72,7 +72,7 @@ body {
     margin-top: 67px;
 }
 
-.button_start:hover {
+.startBtn:hover {
     background: #5d8d0b;
 }
 
