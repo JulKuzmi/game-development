@@ -29,26 +29,31 @@ body {
     flex-direction: column;
 }
 
-.button_number {
-    border-radius: 12px;
-    border: 0;
-    text-transform: uppercase;
-    width: 98px;
-    height: 98px;
-    cursor: pointer;
-    margin-bottom: 48px;
-}
-
-.button_number-primary {
-    color: #0080C1;
-    background: #FFFFFF;
+.level{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
     font-weight: 400;
     font-size: 64px;
-   line-height: 72px;
+    line-height: 72px;
+    color: #0080C1;
 }
 
-.button_number-primary:hover {
-    background: #C2F5FF;
+.level label{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    width: 98px;
+    height: 98px;
+    left: 341px;
+    top: 354px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.level input[type="radio"] {
+    display: none;
 }
 
 .button_start {
@@ -64,6 +69,7 @@ body {
     line-height: 32px;
     margin-bottom: 67px;
     cursor: pointer;
+    margin-top: 67px;
 }
 
 .button_start:hover {
