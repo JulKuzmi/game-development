@@ -6,7 +6,7 @@ let userLvl = null;
 for(const level of levels){
     level.addEventListener('input', () => {
         userLvl = level.value;
-        alert(`Выбранный вами уровень сложности ${userLvl}`);
+        console.log(`Выбранный вами уровень сложности ${userLvl}`);
     })
 };
 
