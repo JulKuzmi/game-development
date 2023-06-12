@@ -6,7 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "http-server -p 3004",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "lint:js": "eslint ./**/*.js"
     },
     "keywords": [],
     "author": "",
@@ -17,6 +18,9 @@
     },
     "devDependencies": {
         "axios": "^1.4.0",
+        "eslint": "^8.42.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
         "prettier": "^2.8.8"
     }
 }
