@@ -17,8 +17,59 @@ body {
     font-family: 'StratosSkyeng';
 }
 
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22px;
+}
 
+.timing {
+    display: flex;
+    flex-direction: column;
+}
 
+.allTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 57px;
+}
+
+.minSek {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.time {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+.startAgain {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    background: #7ac100;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 246px;
+    height: 48px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #fff;
+    margin-right: 23px;
+}
 .memory_game {
     margin: auto;
     perspective: 1000px;
