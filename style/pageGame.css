@@ -7,8 +7,9 @@
     font-family: 'StratosSkyeng';
     font-style: normal;
     font-weight: 400;
-    src: url(fonts/stratosskyengweb-regular.woff) format('woff');
-    src: url(fonts/stratosskyengweb-regular.woff2) format('woff2');
+    src: local('StratosSkyeng'),
+        url('/fonts/stratosskyengweb-regular.woff2') format('woff2'),
+        url('./fonts/stratosskyengweb-regular.woff') format('woff');
 }
 
 body {
@@ -16,10 +17,10 @@ body {
     font-family: 'StratosSkyeng';
 }
 
+
+
 .memory_game {
     margin: auto;
-    display: flex;
-    flex-flow: row wrap;
     perspective: 1000px;
 }
 
