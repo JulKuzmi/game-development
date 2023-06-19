@@ -15,4 +15,6 @@
         "camelcase": ["error"],
         "eqeqeq": ["error", "always"]
     }
+     
 }
+

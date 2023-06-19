@@ -1,6 +1,6 @@
-import { renderLvlPage } from './lvlPage.js'
+import { renderLvlPage } from './gameMunu.js'
 const levels = document.querySelectorAll('.radio')
-const start = document.querySelector('.startBtn')
+const start = document.querySelector('.start-btn')
 let userLvl = null
 
 for (const level of levels) {
