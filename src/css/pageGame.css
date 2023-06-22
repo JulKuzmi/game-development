@@ -1,0 +1,113 @@
+/* stylelint-disable prettier/prettier */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    src: local('StratosSkyeng'),
+        url('/fonts/stratosskyengweb-regular.woff2') format('woff2'),
+        url('./fonts/stratosskyengweb-regular.woff') format('woff');
+}
+
+body {
+    background: #004980;
+    font-family: StratosSkyeng, sans-serif;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22px;
+}
+
+.timing {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 57px;
+}
+
+.min-sek {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #fff;
+}
+
+.time {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #fff;
+}
+
+.start-again {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    background: #7ac100;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    width: 246px;
+    height: 48px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #fff;
+    margin-right: 23px;
+}
+
+.memory-game {
+    perspective: 1000px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 15px;
+    margin: 35px;
+}
+
+.memory-card {
+    width: 95px;
+    height: 133px;
+    transform: scale(1);
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card:active {
+    transform: scale(0.95);
+    transition: transform 0.2s;
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
