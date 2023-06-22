@@ -1,3 +1,4 @@
+// import { cards } from './allCards.js'
 const box = document.querySelector('.container')
 export function renderLvlPage(userLvl) {
     const htmlGame = `
