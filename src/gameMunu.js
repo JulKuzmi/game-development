@@ -2,10 +2,10 @@ import { startGame } from './script'
 import { cards } from './allCards'
 import './css/pageGame.css'
 
-export function renderLvlPage(container: HTMLElement, cardsCount: number) {
+export function renderLvlPage(container, cardsCount) {
     let openHtml = ''
-    let firstCard = ''
-    let secondCard = ''
+    // let firstCard = ''
+    // let secondCard = ''
     for (let i = 0; i < cardsCount; i++) {
         const random = cards[Math.floor(Math.random() * cards.length)]
         openHtml += `
