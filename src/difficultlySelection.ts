@@ -26,4 +26,37 @@ export const difficultlyChoose = (add: HTMLElement) => {
        </form>
        </div>
    </div>`
+
+    const formDifficult = document.querySelector(
+        '.difficulty-form'
+    ) as HTMLElement
+    formDifficult.addEventListener('submit', (Event) => {
+        Event.preventDefault()
+
+        const difficultlyButtons: HTMLInputElement[] = Array.from(
+            document.querySelectorAll('.difficulty-lvl input[type="radio"]')
+        )
+        for (let difficultlyButton of difficultlyButtons) {
+            if (difficultlyButton.checked) {
+                complexity = Number(difficultlyButton.value)
+                openPage('game')
+                break
+            }
+        }
+        if (!complexity) {
+            alert('выберите уровень сложности для игры')
+        }
+    })
+
+    const difficultlyLvl = document.querySelectorAll('.difficulty-lvl')
+    const startButton = document.querySelector('.start')
+    difficultlyLvl.forEach((difficultlyLvl) => {
+        difficultlyLvl.addEventListener('click', () => {
+            startButton?.classList.add('start-game__new')
+            document
+                .querySelector('.difficulty-active__game')
+                ?.classList.remove('difficulty-active__game')
+            difficultlyLvl.classList.add('difficulty-active__game')
+        })
+    })
 }
