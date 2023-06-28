@@ -67,3 +67,8 @@
 //     })
 // }
 // startGame()
+import { difficultlyChoose } from './difficultlySelection'
+let page = 'complexity'
+const add: HTMLElement = document.getElementById('box')!
+
+const renderAdd = () => {}
