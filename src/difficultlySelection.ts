@@ -1,3 +1,5 @@
+import { openPage } from './script'
+
 // добавить разметку выбора уровня
 export let complexity = 0
 export const difficultlyChoose = (add: HTMLElement) => {

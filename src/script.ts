@@ -68,7 +68,18 @@
 // }
 // startGame()
 import { difficultlyChoose } from './difficultlySelection'
+export const openPage = (pageNew: string) => {
+    page = pageNew
+    renderAdd()
+}
+
 let page = 'complexity'
 const add: HTMLElement = document.getElementById('box')!
 
-const renderAdd = () => {}
+const renderAdd = () => {
+    switch (page) {
+        case 'complexity':
+            difficultlyChoose(add)
+            break
+    }
+}
