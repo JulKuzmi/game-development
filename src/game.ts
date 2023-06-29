@@ -52,5 +52,16 @@ interface Card {
     nod: Element | null
 }
 
+const winCheck = () => {
+    const cards: HTMLElement[] = Array.from(
+        document.querySelectorAll('.card-game')
+    )
+    for (let card of cards) {
+        if (card.dataset.status !== 'open') {
+            return false
+        }
+    }
+    return true
+}
 //событие на клик карты
 const cards = document.querySelectorAll('.card-game')
