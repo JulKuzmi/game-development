@@ -7,7 +7,7 @@ interface Time {
     sec: string
 }
 
-export const gameResult = (isWin: Boolean, time: Time) => {
+export const gameResult = (isWin: boolean, time: Time) => {
     add.innerHTML += `
         <div class="end">
             <div class="end-box">

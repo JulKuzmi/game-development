@@ -3,7 +3,7 @@ import { openPage } from './script'
 // добавить разметку выбора уровня
 export let complexity = 0
 export const DifficultlyChoose = (add: HTMLElement) => {
-    let complexity = 0
+    complexity = 0
     add.innerHTML = ` <div class="container">
      <div class="container-content">
        <h2 class="content-text">Выбери сложность</h2>
@@ -36,7 +36,7 @@ export const DifficultlyChoose = (add: HTMLElement) => {
         const difficultlyButtons: HTMLInputElement[] = Array.from(
             document.querySelectorAll('.difficulty-lvl input[type="radio"]')
         )
-        for (let difficultlyButton of difficultlyButtons) {
+        for (const difficultlyButton of difficultlyButtons) {
             if (difficultlyButton.checked) {
                 complexity = Number(difficultlyButton.value)
                 openPage('game')
