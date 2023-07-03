@@ -5,7 +5,7 @@
 }
 
 @font-face {
-    font-family: StratosSkyeng;
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     src: local('StratosSkyeng'),
@@ -18,7 +18,7 @@ body {
     font-family: StratosSkyeng, sans-serif;
 }
 
-.top {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;

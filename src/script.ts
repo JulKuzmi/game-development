@@ -1,5 +1,5 @@
 import { DifficultlyChoose } from './difficultlySelection'
-
+import { Game } from './game'
 export const openPage = (pageNew: string) => {
     page = pageNew
     renderAdd()
@@ -13,5 +13,12 @@ const renderAdd = () => {
         case 'complexity':
             DifficultlyChoose(add)
             break
+        case 'Game':
+            Game(add)
+            break
+        default:
+            console.log('error')
+            break
     }
 }
+renderAdd()
