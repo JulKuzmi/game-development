@@ -1,5 +1,5 @@
-import { difficultlyChoose } from './difficultlySelection'
-import '.src/css/style.css'
+import { DifficultlyChoose } from './difficultlySelection'
+
 export const openPage = (pageNew: string) => {
     page = pageNew
     renderAdd()
@@ -11,7 +11,7 @@ const add: HTMLElement = document.getElementById('box')!
 const renderAdd = () => {
     switch (page) {
         case 'complexity':
-            difficultlyChoose(add)
+            DifficultlyChoose(add)
             break
     }
 }

@@ -1,8 +1,8 @@
 import { openPage } from './script'
-import './css/style.css'
+
 // добавить разметку выбора уровня
 export let complexity = 0
-export const difficultlyChoose = (add: HTMLElement) => {
+export const DifficultlyChoose = (add: HTMLElement) => {
     let complexity = 0
     add.innerHTML = ` <div class="container">
      <div class="container-content">

@@ -7,10 +7,10 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "http-server -p 3004",
         "format": "prettier —-write ./src/",
-        "lint:js": "eslint ./src/**/*.js",
+        "lint:ts": "eslint ./src/**/*.ts",
         "lint:css": "stylelint  ./src/**/*.css",
         "prepare": "husky install",
-        "lint": "npm run lint:js && npm run lint:css",
+        "lint": "npm run lint:ts && npm run lint:css",
         "build": "npx webpack --mode production",
         "starts": "npx webpack --mode development"
     },
@@ -22,6 +22,8 @@
         "lodash": "^4.17.21"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.60.1",
+        "@typescript-eslint/parser": "^5.60.1",
         "axios": "^1.4.0",
         "eslint": "^8.42.0",
         "eslint-config-prettier": "^8.8.0",

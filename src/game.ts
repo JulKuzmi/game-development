@@ -3,7 +3,6 @@
 // Средний уровень: 12 карт
 // Сложный уровень: 18 карт
 
-import { difficultlyChoose } from './difficultlySelection'
 import { openPage } from './script'
 
 // дабавить ранг и масти карт и массив карт
