@@ -6,7 +6,7 @@
 import { complexity } from './difficultlySelection'
 import { gameResult } from './gameResult'
 import { openPage } from './script'
-import './css/styles.css'
+import './src/css/styles.css'
 interface Card {
     value: string | undefined
     nod: Element | null

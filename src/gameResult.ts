@@ -1,5 +1,5 @@
 import { openPage } from './script'
-
+import 'src/css/styles.css'
 const add: HTMLElement = document.getElementById('box')!
 
 interface Time {

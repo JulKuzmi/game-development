@@ -1,5 +1,5 @@
 import { openPage } from './script'
-import './css/styles.css'
+import './src/css/styles.css'
 // добавить разметку выбора уровня
 export let complexity = 0
 export const DifficultlyChoose = (add: HTMLElement) => {
@@ -8,7 +8,7 @@ export const DifficultlyChoose = (add: HTMLElement) => {
      <div class="container-content">
        <h2 class="content-text">Выбери сложность</h2>
        <form class="difficulty-form">
-         <div class="difficulty-form__lvls">
+         <div class="difficulty-form-lvls">
            <label class="difficulty-lvl">
              <input type="radio" name="difficulty" value="1">
              <span>1</span>
@@ -54,9 +54,9 @@ export const DifficultlyChoose = (add: HTMLElement) => {
         difficultlyLvl.addEventListener('click', () => {
             startButton?.classList.add('start-game__new')
             document
-                .querySelector('.difficulty-active__game')
-                ?.classList.remove('difficulty-active__game')
-            difficultlyLvl.classList.add('difficulty-active__game')
+                .querySelector('.difficulty-active-game')
+                ?.classList.remove('difficulty-active-game')
+            difficultlyLvl.classList.add('difficulty-active-game')
         })
     })
 }
