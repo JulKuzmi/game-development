@@ -6,7 +6,7 @@
 import { complexity } from './difficultlySelection'
 import { gameResult } from './gameResult'
 import { openPage } from './script'
-
+import './css/stylea.css'
 interface Card {
     value: string | undefined
     nod: Element | null
@@ -116,7 +116,6 @@ const startGame = () => {
         }
     }, 1000)
 
-    // Ивент на клик карты
     const cards = document.querySelectorAll('.game__card')
     cards.forEach((card) => {
         card.addEventListener('click', () => {
@@ -180,7 +179,6 @@ const fillCardsArray = (numbers: number) => {
 }
 
 export const Game = (app: HTMLElement) => {
-    // опции сложности
     arrCards = []
     switch (complexity) {
         case 1:
@@ -218,7 +216,5 @@ export const Game = (app: HTMLElement) => {
         </div>
     </div>
   `
-
-    // Запуск игры, активность кнопок и запуск таймера после предпоказа карт
     setTimeout(startGame, 5000)
 }

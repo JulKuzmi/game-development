@@ -1,16 +1,11 @@
 /* stylelint-disable prettier/prettier */
-* {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     src: local('StratosSkyeng'),
-        url('/fonts/stratosskyengweb-regular.woff2') format('woff2'),
-        url('./fonts/stratosskyengweb-regular.woff') format('woff');
+        url('/assets/fonts/stratosskyengweb-regular.woff') format('woff1'),
+        url('/assets/fonts/stratosskyengweb-regular.woff2') format('woff2');
 }
 
 body {

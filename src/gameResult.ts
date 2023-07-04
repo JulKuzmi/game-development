@@ -25,6 +25,6 @@ export const gameResult = (isWin: boolean, time: Time) => {
     `
     const againButton = document.querySelector('.end-again')
     againButton?.addEventListener('click', () => {
-        openPage('Difficulty')
+        openPage('complexity')
     })
 }

@@ -1,5 +1,6 @@
 import { DifficultlyChoose } from './difficultlySelection'
 import { Game } from './game'
+import './css/styles.css'
 export const openPage = (pageNew: string) => {
     page = pageNew
     renderAdd()
