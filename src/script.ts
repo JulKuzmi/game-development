@@ -1,5 +1,4 @@
-import './css/styles.css'
-
+import './src/css/styles.css'
 import 'lodash'
 import { gameLogic } from './game'
 
@@ -65,25 +64,3 @@ export const openPage = () => {
     })
 }
 openPage()
-
-// export const gameResult = (isWin: boolean, time: Time) => {
-//     add.innerHTML += `
-//         <div class="end">
-//             <div class="end-box">
-//                 <img class="end-img" src="./img/${
-//                     isWin ? 'celebration' : 'dead'
-//                 }-game.png" alt="${isWin ? 'celebration' : 'dead'} game">
-//                 <p class="end__status">${
-//                     isWin ? 'Вы выиграли!' : 'Вы проиграли!'
-//                 }</p>
-//                 <p class="end__time-text">Затраченое время</p>
-//                 <p class="end__time">${time.min}.${time.sec}</p>
-//                 <button class="end-again">Играть снова</button>
-//             </div>
-//         </div>
-//     `
-//     const againButton = document.querySelector('.end-again')
-//     againButton?.addEventListener('click', () => {
-//         openPage('complexity')
-//     })
-// }

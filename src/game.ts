@@ -3,13 +3,13 @@
 // Средний уровень: 12 карт
 // Сложный уровень: 18 карт
 import { cards } from './cards'
-import './css/pageGame.css'
+import './src/css/styles.css'
 import { openPage } from './script'
 export function gameLogic(box: HTMLElement, cardsCount: number) {
-    let openHtml = ''
+    let begin = ''
     let firstCard: string | undefined
     let secondCard: string | undefined
-    let myTime = ''
+    let hourseTime = ''
     let random: string[] = []
     for (let i = 0; i < cardsCount / 2; i++) {
         const randomCard = cards[Math.floor(Math.random() * cards.length)]
@@ -17,7 +17,7 @@ export function gameLogic(box: HTMLElement, cardsCount: number) {
     }
     random = random.concat(random)
     random.sort(() => Math.random() - 0.5)
-    openHtml = random
+    begin = random
         .map(
             (card) => `
         <div data-index="${card}">
@@ -27,7 +27,7 @@ export function gameLogic(box: HTMLElement, cardsCount: number) {
         .join('')
     const headHtml = `
      <header class="head">
-     <div class="timetable">
+     <div class="timeline">
         <div class="minutes">
             <div class="min">
                 <p>min</p>
@@ -41,11 +41,11 @@ export function gameLogic(box: HTMLElement, cardsCount: number) {
         </div>
      </div>
      <div class="startAgain">
-        <button class="buttonstart">Начать заново</button>
+        <button class="button-start">Начать заново</button>
      </div>
      </header>`
-    const open = `<div class="tops">${headHtml}
-     <div class="cards">${openHtml}</div> </div>`
+    const open = `<div class="boxs">${headHtml}
+     <div class="cards">${begin}</div> </div>`
     box.innerHTML = open
     setTimeout(() => {
         const card = document.querySelectorAll('.card')
@@ -62,7 +62,7 @@ export function gameLogic(box: HTMLElement, cardsCount: number) {
         const seconds = (time % 60).toString().padStart(2, '0')
         const gameTimer = document.querySelector('.time') as HTMLElement
         gameTimer.textContent = `${minutes}.${seconds}`
-        myTime = gameTimer.innerHTML
+        hourseTime = gameTimer.innerHTML
         const buttonStart = document.querySelector(
             '.buttonstart'
         ) as HTMLElement
@@ -93,7 +93,7 @@ export function gameLogic(box: HTMLElement, cardsCount: number) {
                     <h1 class="title-end">Вы проиграли!</h1>
                     </div>
                     <div class="text-end">Затраченное время:</div>
-                    <div class="time-end">${myTime}</div>
+                    <div class="time-end">${hourseTime}</div>
                     <button class="startagain">Играть снова</button>
                     </div>`
                     box.innerHTML = dead
@@ -110,7 +110,7 @@ export function gameLogic(box: HTMLElement, cardsCount: number) {
                     <h1 class="title-end">Вы выиграли!</h1>
                     </div>
                     <div class="text-end">Затраченное время:</div>
-                    <div class="time-end">${myTime}</div>
+                    <div class="time-end">${hourseTime}</div>
                     <button class="startagain">Играть снова</button>
                     </div>`
                     box.innerHTML = celebration
