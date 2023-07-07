@@ -3,7 +3,7 @@
 // Средний уровень: 12 карт
 // Сложный уровень: 18 карт
 import { cards } from './cards'
-import './src/css/styles.css'
+import './css/pageGame.css'
 import { openPage } from './script'
 export function gameLogic(box: HTMLElement, cardsCount: number) {
     let begin = ''

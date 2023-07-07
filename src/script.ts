@@ -1,4 +1,4 @@
-import './src/css/styles.css'
+import './css/styles.css'
 import 'lodash'
 import { gameLogic } from './game'
 
