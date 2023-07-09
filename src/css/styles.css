@@ -1,46 +1,62 @@
 /* stylelint-disable prettier/prettier */
-* {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     src: local('StratosSkyeng'),
-        url('/fonts/stratosskyengweb-regular.woff2') format('woff2'),
-        url('./fonts/stratosskyengweb-regular.woff') format('woff');
+        url('/assets/fonts/stratosskyengweb-regular.woff') format('woff'),
+        url('/assets/fonts/stratosskyengweb-regular.woff2') format('woff2');
 }
 
-body {
-    background: #004980;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: StratosSkyeng, sans-serif;
 }
 
+body {
+    font-family: StratosSkyeng, sans-serif;
+}
+
+.box {
+    background-color: #004980;
+    display: flex;
+    justify-content: center;
+}
+
 .container {
-    background: #c2f5ff;
-    max-width: 480px;
+    margin-top: 157px;
+    width: 480px;
     height: 459px;
+    left: 272px;
+    top: 158px;
+    background: #c2f5ff;
     border-radius: 12px;
+}
+
+/* страница выбора уровня игры */
+.container-text {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
     font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-    display: flex;
-    position: absolute;
-    top: calc(50% - 200px);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #004980;
+    padding-top: 52px;
+    padding-left: 136px;
+    padding-right: 136px;
 }
 
-.container-content {
-    margin: auto;
+.container-difficultly {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 48px;
 }
 
-.level {
+.container-difficultly-level {
     display: flex;
     gap: 24px;
     justify-content: space-between;
@@ -50,7 +66,11 @@ body {
     color: #0080c1;
 }
 
-.level label {
+.container-difficultly-level input[type='radio'] {
+    display: none;
+}
+
+.container-difficultly-level label {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -63,42 +83,32 @@ body {
     border-radius: 12px;
 }
 
-.level input[type='radio'] {
-    display: none;
-}
-
-.start-btn {
+.start {
     background: #7ac100;
     border-radius: 12px;
-    border: 0;
-    color: #fff;
+    margin-top: 67px;
+    margin-left: 117px;
     width: 246px;
-    height: 50px;
-    font-style: normal;
+    height: 48px;
+    left: 389px;
+    top: 519px;
+    font-family: StratosSkyeng, sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 67px;
-    cursor: pointer;
-    margin-top: 67px;
-}
-
-.start-btn:hover {
-    background: #5d8d0b;
-}
-
-.start {
     display: flex;
+    align-items: center;
     justify-content: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #fff;
+    border-color: transparent;
+    cursor: pointer;
 }
 
-.content-text {
-    font-family: StratosSkyeng, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    color: #004980;
-    text-align: center;
-    margin-bottom: 52px;
+.start:hover {
+    background-image: radial-gradient(
+        ellipse farthest-corner at 50% 50%,
+        #fdeaa8,
+        #7ac100
+    );
 }
